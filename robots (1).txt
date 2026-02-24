@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://swarailapk.com/sitemap.xml
+
+# Allow all web crawlers to access all content
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
