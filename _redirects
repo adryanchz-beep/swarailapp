@@ -1,0 +1,9 @@
+# 1. Protect the Homepage (Rule matches exact root and stops)
+/  /  200
+
+# 2. Redirect all .html articles to their clean versions
+/*.html  /:splat  301!
+
+# 3. (Optional) Force WWW or Non-WWW (Netlify handles this in Domain Settings usually)
+# If you want to force everything to https://swarailapk.com/
+# https://www.swarailapk.com/* https://swarailapk.com/:splat  301!
