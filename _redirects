@@ -1,9 +1,15 @@
-# 1. Protect the Homepage (Rule matches exact root and stops)
-/  /  200
+# Redirect any PHP file to homepage
+/*.php / 301
 
-# 2. Redirect all .html articles to their clean versions
-/*.html  /:splat  301!
+# Force HTTPS and remove www
+http://swarailapk.com/* https://swarailapk.com/:splat 301!
+https://www.swarailapk.com/* https://swarailapk.com/:splat 301!
 
-# 3. (Optional) Force WWW or Non-WWW (Netlify handles this in Domain Settings usually)
-# If you want to force everything to https://swarailapk.com/
-# https://www.swarailapk.com/* https://swarailapk.com/:splat  301!
+# Remove .html extension
+/:slug.html /:slug/ 301
+
+# Remove index.html except homepage
+/*/index.html /:splat/ 301
+
+# Redirect ALL 404 pages to homepage
+/* / 301
