@@ -1,0 +1,14 @@
+# Enable Netlify's native asset processing
+[build.processing]
+  skip_processing = false
+
+# Enable Pretty URLs natively 
+# (Automatically rewrites /about.html to /about and /index.html to /)
+[build.processing.html]
+  pretty_urls = true
+
+# Catch-all rule for WRONG / non-existent URLs (Must be at the very bottom)
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
